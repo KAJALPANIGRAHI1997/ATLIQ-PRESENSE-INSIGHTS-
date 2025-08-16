@@ -58,9 +58,8 @@ DIVIDE(SUM('Final Data'[SL Count]), COUNTROWS('Final Data'))
 
 -- Month label (for visuals)
 [MMM YY] = FORMAT(SELECTEDVALUE('Calendar'[Date]), "MMM yy")
-# ATLIQ PRESENCE INSIGHTS
 
-## 📊 Key Visuals
+📊 Key Visuals
 
 - **KPI Cards:** Attendance %, WFH %, SL %
 - **Small Multiples / Tiles:** % by day of week
@@ -68,7 +67,7 @@ DIVIDE(SUM('Final Data'[SL Count]), COUNTROWS('Final Data'))
 - **Slicers:** MMM YY, Date range
 - **Table:** Employee ID, Attendance %, Present Days, WFH % (with totals)
 
-## ▶️ How to Open
+▶️ How to Open
 
 1. Install **Power BI Desktop** (July 2024 or later recommended).
 2. Open `pbix/ATLIQ_Presence_Insights.pbix`.
@@ -77,7 +76,7 @@ DIVIDE(SUM('Final Data'[SL Count]), COUNTROWS('Final Data'))
    - Ensure the date table is marked as **Date Table**.
    - Refresh.
 
-## ⚙️ Optional SQL Prep
+⚙️ Optional SQL Prep
 
 If you staged data in SQL first, include scripts in `/sql` and document any views used by the PBIX.
 
@@ -92,7 +91,7 @@ SELECT
   CASE WHEN Status = 'SL' THEN 1 ELSE 0 END AS SL_Count
 FROM raw_attendance;
 
-## 🧽 Formatting & UX Choices
+🧽 Formatting & UX Choices
 
 Rounded cards with soft shadows and a dark header band
 
@@ -102,7 +101,7 @@ Dotted regression trend line for quick direction sensing
 
 Slicers for month grouping (MMM YY) and date navigation
 
-## 🗂 Refresh / Maintenance
+🗂 Refresh / Maintenance
 
 Verify calendar covers the entire reporting range
 
@@ -110,11 +109,11 @@ Check relationships after schema changes
 
 Recalculate measures if business logic changes (e.g., exclude holidays)
 
-## 📜 License
+📜 License
 
 MIT — feel free to fork and adapt with attribution.
 
-## 🙋‍♀️ Author / Contact
+🙋‍♀️ Author / Contact
 
 Kajal Panigrahi
 For questions or collaboration, open a GitHub issue or reach out via LinkedIn / Email.
